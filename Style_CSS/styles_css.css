@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;    
+}
+
+header{
+    margin-bottom: 33px;
+    margin-top: 33px; /*либо  margin: 40px 0px;*/
+    background: E5E5E5;      
+}
+.header-flex{
+    display: flex;
+    justify-content:space-between;   
+}
+
+body{ /* Во всем BODY будет данный шрифт, - родитель для всех классов -- цвет всей страницы*/
+    font-family: 'Josefin Sans', sans-serif;
+} 
+
+.josef-font{    
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    color: #128C76;
+}
+
+.header-menu{    
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* переводит из вертикального положения в
+    строку*/
+    justify-content: end;/* отправит на правый край*/
+
+}
