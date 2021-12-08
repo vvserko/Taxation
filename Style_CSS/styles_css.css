@@ -8,36 +8,85 @@ html{
 }
 
 header{
-    margin-bottom: 33px;
-    margin-top: 33px; /*либо  margin: 40px 0px;*/
-    background: E5E5E5;      
+    margin-bottom: 18px;
+    margin-top: 18px; 
+    background-color: #ecf3ea;         
 }
-.header-flex{
+header{
     display: flex;
-    justify-content:space-between;   
+    justify-content: space-between;
+    align-items: center;
+    position: static;       
 }
 
 body{ /* Во всем BODY будет данный шрифт, - родитель для всех классов -- цвет всей страницы*/
     font-family: 'Josefin Sans', sans-serif;
 } 
 
-.josef-font{    
+.lbl-font{   
+    margin-left: 10%; 
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.06em;
     color: #128C76;
+    font-weight: bold;
 }
 
 .header-menu{    
+    font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: #333333;
+    margin-right: 10%;
 }
+
 
 header nav ul {
     list-style: none;
-    display: flex; /* переводит из вертикального положения в
-    строку*/
-    justify-content: end;/* отправит на правый край*/
+    display: flex; /* переводит из вертикального положения в строку*/        
+    align-items: center;   
+}
 
+header nav ul li{
+    margin-right: 16px;/* раздвигает кнопки между собой к тэгу li*/
+}
+.red{
+    text-transform: uppercase;
+    color: #F56B8D;
+    padding: 16px 40px 14px;    
+    border: 1px solid #F56B8D;
+    box-sizing: border-box;
+}
+.green{
+    
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background:#128C76;  
+    padding: 16px 40px 14px 40px;   
+}
+
+header nav ul li a{
+    transition: all 0.1s;
+    text-decoration: none;
+}
+header nav ul li a:hover { /* hover реагирует при наведении */
+    background: rgb(204, 142, 142);
+    /*background: linear-gradient(45deg, rgb(167, 123, 150) 0%, rgb(71, 70, 54) 100%);*/
+    /*background: linear-gradient(45deg, #00b3ff 0%, #6a11cd 100%);*/
+    color: black;
+    transition: all 0.3s; /* Скорость подсветки кнопок*/
+}
+header nav ul li a:active {
+    /*при наведении кнопкой мыши (длителдьное нажатие)
+     - в основном при адаптации 
+    для мобильных устройств*/
+    background: rgb(141, 228, 69);
+    border: 5px solid rgb(211, 25, 65);
+}
+.rubi_drova{
+    position: relative;
+    height: 780px;
+    /*overflow:hidden;*/
+    Fill: Solid rgba(17, 51, 117, 0.5)  
+    
 }
