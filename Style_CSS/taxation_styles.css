@@ -2,51 +2,46 @@
     margin: 0px;
     padding: 0px;
 }
-
 html{
     scroll-behavior: smooth;    
 }
-
-header{
-    margin-bottom: 18px;
-    margin-top: 18px; 
+header{    
     background-color: #ecf3ea;         
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: static;       
-}
-
 body{ /* Во всем BODY будет данный шрифт, - родитель для всех классов -- цвет всей страницы*/
     font-family: 'Josefin Sans', sans-serif;
 } 
-
+.flex{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: static;    
+}
+.container{     
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .lbl-font{   
-    margin-left: 10%; 
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.06em;
     color: #128C76;
     font-weight: bold;
 }
-
-.header-menu{    
+.header-menu{ 
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: #333333;
-    margin-right: 10%;
 }
-
-
 header nav ul {
     list-style: none;
-    display: flex; /* переводит из вертикального положения в строку*/        
+    display: flex;    
     align-items: center;   
 }
-
 header nav ul li{
     margin-right: 16px;/* раздвигает кнопки между собой к тэгу li*/
 }
@@ -57,14 +52,14 @@ header nav ul li{
     border: 1px solid #F56B8D;
     box-sizing: border-box;
 }
-.green{
-    
+.green {    
     color: #FFFFFF;
     text-transform: uppercase;
-    background:#128C76;  
+    background-color:#128C76; 
+}
+.button-header{ 
     padding: 16px 40px 14px 40px;   
 }
-
 header nav ul li a{
     transition: all 0.1s;
     text-decoration: none;
@@ -83,10 +78,47 @@ header nav ul li a:active {
     background: rgb(141, 228, 69);
     border: 5px solid rgb(211, 25, 65);
 }
-.rubi_drova{
-    position: relative;
-    height: 780px;
-    /*overflow:hidden;*/
-    Fill: Solid rgba(17, 51, 117, 0.5)  
-    
+.banner{
+    position: relative;          
 }
+.banner-flex{
+    position: absolute;
+    margin: 202px 775px 204px 375px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;    
+    width: 770px;
+    height: 374px;    
+}
+.meaningful{  
+    margin-left: auto;
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.browse{
+    width: 470px;
+    height: 64px;
+    margin-left: 0px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;    
+}
+.button-banner{ 
+    display: flex;
+    font-size: 16px;
+    font-weight:bold;
+    line-height: 24px;
+    width: 270px;
+    height: 70px;  
+    justify-content: center; 
+    align-items: center;
+}
+.button-banner:hover{
+    color: black;
+    transition: all 0.3s; 
+    box-shadow: 20px 10px 40px rgba(202, 50, 50, 0.5); /* важно отличие размеров тени, иначе не работает*/
+    cursor: progress;
+}
+

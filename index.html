@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxation</title>
-    <link rel="stylesheet" href="./Style_CSS/styles_css.css">
+    <link rel="stylesheet" href="./Style_CSS/taxacion_styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,8 @@
 
 <body>
     <header>
-        <!-- самый верхний заголовок с меню, располагаем его по горизонтали-->
+        <div class="flex container">
+            <!-- самый верхний заголовок с меню, располагаем его по горизонтали-->
             <!--1-й блок эмблема-->
             <div class="lbl-font">
                 <a>TAXATION</a>
@@ -28,15 +29,35 @@
                         <li><a href="">Opportunities</a></li>
                         <li><a href="">How it works</a></li>
                         <li><a href="">About us</a></li>
-                        <li class="green"><a href="">Login</a></li>
+                        <li class="green button-header"><a href="">Login</a></li>
                         <li class="red"><a href="">Register</a></li>
                     </ul>
                 </nav>
             </div>
-    </header>    
-</body>
-    <!--Картинка-->
-    <div class="rubi_drova">
-        <img src="./IMG/img.jpg" alt="Картинка img" width="100%">
+        </div>
+
+    </header>
+    <!--Баннер-->
+    <div class="banner">
+        <!--информация внутри баннера-->
+        <div class="banner-flex">
+            <div class="meaningful">
+                <a>Meaningful investments in Main Street businesses</a>
+            </div>
+            <div class="browse">
+                <a>Browse vetted investment offerings in communities all over the US.</a>
+            </div>
+            <div class="green button-banner">
+                <p>Get Started</p>
+            </div>           
+        </div>       
+        
+        <!--Картинка-->
+        <img src="./IMG/stumps.jpg" alt="Вырубленный лес" style="width: 100%;">
+
     </div>
+
+</body>
+
+
 </html>
