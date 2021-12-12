@@ -38,7 +38,7 @@ body{ /* Во всем BODY будет данный шрифт, - родител
     color: #333333;
 }
 header nav ul {
-    list-style: none;
+    list-style: none;/*убираем точку перед элементами списка*/
     display: flex;    
     align-items: center;   
 }
@@ -47,11 +47,12 @@ header nav ul li{
 }
 .red{
     text-transform: uppercase;
-    color: #F56B8D;
-    padding: 16px 40px 14px;    
+    color: #F56B8D;       
     border: 1px solid #F56B8D;
     box-sizing: border-box;
 }
+.button-register{
+    padding: 16px 40px 14px; }
 .green {    
     color: #FFFFFF;
     text-transform: uppercase;
@@ -62,7 +63,7 @@ header nav ul li{
 }
 header nav ul li a{
     transition: all 0.1s;
-    text-decoration: none;
+    text-decoration: none;/*убираем подчеркивание текста*/
 }
 header nav ul li a:hover { /* hover реагирует при наведении */
     background: rgb(204, 142, 142);
@@ -87,15 +88,17 @@ header nav ul li a:active {
     display: flex;
     justify-content: space-between;
     flex-direction:column;    
-    width: 770px;
-    height: 374px;    
+    width: 870px;
+    height: 374px;  
+    z-index: 1;  
 }
 .meaningful{  
-    margin-left: auto;
+    margin-left: 0px;
     font-size: 60px;
     line-height: 80px;
     font-weight: bold;
     color: #FFFFFF;
+    
 }
 .browse{
     width: 470px;
@@ -103,7 +106,8 @@ header nav ul li a:active {
     margin-left: 0px;
     font-size: 24px;
     line-height: 32px;
-    color: #FFFFFF;    
+    color: #FFFFFF;   
+     
 }
 .button-banner{ 
     display: flex;
@@ -120,5 +124,151 @@ header nav ul li a:active {
     transition: all 0.3s; 
     box-shadow: 20px 10px 40px rgba(202, 50, 50, 0.5); /* важно отличие размеров тени, иначе не работает*/
     cursor: progress;
+}
+.top{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 554px;
+    height: 554px;
+    
+}
+.top2{
+    position: absolute;
+    width: 558px;
+    height: 558px;
+    left: 227px;
+    top: 61px;
+    border-radius: 65%;
+    filter: alpha(Opacity=40);
+    opacity: 0.4; 
+}
+.circle{
+    position: absolute;
+    width: 558px;
+    height: 558px;
+    left: 227px;
+    top: 61px;
+    border-radius: 50%;    
+    background-color: #128C76;
+    filter: alpha(Opacity=40);
+    opacity: 0.4; 
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;  
+    align-items: center;
+    margin-top: 160px;  
+    margin-bottom: 160px;    
+}
+main ul li{    
+    list-style: none; /*убираем точку перед элементами списка*/
+}
+.infoblock{
+    width: 770px;
+    height: 152px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.offerings{
+    position: static;
+    width: 770px;
+    height: 64px;    
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;    
+    color: #333333;
+    
+}
+.explore{
+    position: static;
+    color: #999999;
+    font-size: 24px;
+    line-height: 32px;
+    width: 770px;
+    height: 64px; 
+}
+.batton-main{   
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: bold;     
+    width: 270px;
+    height: 70px;
+    padding-top: 24px;
+    padding-bottom:  22px;
+    padding-left: inherit;  
+    text-align: center;     
+    font-size: 16px;
+    line-height: 24px;    
+}
+.topic-list{
+    display: flex;
+    position: relative;
+}
+.topic{
+    display:flex;   
+    flex-direction: column; 
+    width: 370;
+    height: 480px;
+    position: relative;
+}
+
+.tag-list{    
+    display: flex;
+    position: absolute; 
+    top: 24px;
+    left: 24px; 
+    
+}
+.tag{
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: #333333;
+    text-transform: uppercase;
+    padding: 8px 12px 8px 12px;
+    
+}
+.tag{
+    margin-right: 8px;
+}
+.oxalis{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 370px;
+    height: 240px; 
+}
+
+.oxalis-title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.brooklyn{
+    font-size: 16px;
+    line-height: 24px;
+    color: #999999;
+}
+.recognized{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+.raised{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
 }
 
