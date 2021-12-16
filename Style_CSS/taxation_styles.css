@@ -23,6 +23,13 @@ body{ /* Во всем BODY будет данный шрифт, - родител
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
+
+}
+.container_vert{
+    
+    width: 1170px;
+    padding: 160px auto; 
+    
 }
 .lbl-font{   
     font-size: 24px;
@@ -207,8 +214,17 @@ main ul li{
     line-height: 24px;    
 }
 .topic-list{
+    
     display: flex;
-    position: relative;
+    flex-direction: column;
+    position: absolute;
+    
+    flex-wrap: wrap;/*перенос на новую строку*/
+    gap: 50px 20px;/*выставить отсупы между элементами - строки и столбцы*/
+    /*justify-content: space-between; /*некрасиво*/
+    border: 1px solid black;
+
+    
 }
 .topic{
     display:flex;   
@@ -216,6 +232,8 @@ main ul li{
     width: 370;
     height: 480px;
     position: relative;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 .tag-list{    
@@ -232,19 +250,18 @@ main ul li{
     color: #333333;
     text-transform: uppercase;
     padding: 8px 12px 8px 12px;
-    
-}
-.tag{
     margin-right: 8px;
 }
+
 .oxalis{
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
     padding-left: 24px;
     padding-right: 24px;
-    width: 370px;
+    width:322px;
     height: 240px; 
+    border: 1px solid black;
 }
 
 .oxalis-title{

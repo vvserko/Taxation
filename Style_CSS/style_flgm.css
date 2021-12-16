@@ -1,0 +1,464 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{ /* основной шрифт для всей страницы*/
+    font-family: 'Lora', serif;
+    font-weight:400 ;
+
+}
+.font-roboto, .font-roboto a{ /*,font-roboto a - применяется для двух классов*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+header{
+    height: 80px;/* берем из вкладки inspect*/
+    width: 100%;
+    background:rgba(0, 0, 0, 0.2) ; /* берем из вкладки inspect*/
+
+    position: absolute;/*для всего хедера, чтобы был поверх картинки*/
+    z-index: 1; /* Для того чтобы вынести поверх всех окон header*/
+}
+.bunner img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* чтобф картинка не была
+     расплющенная, заполним всю область экрана*/
+}
+.header-flex{
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-between; /*разбросает блоки в разные стороны*/
+    align-items: center;
+    height: 100%;
+}
+.header-nav ul{/* навигация в headeer */
+    display: flex;
+    align-items: center;
+}
+.header-nav ul li a{   
+    font-size: 12px;
+    line-height: 14px;
+    color: #E5E5E5;
+    transition: all 0.3s;
+}
+
+.header-nav ul li a:hover{
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.header-nav ul li{
+    margin-right: 25px;
+}
+.header-nav ul li:last-child{/* псевдоэлемент для последнего li отступ равен 0*/
+    margin-right: 0px;
+}
+.header-nav ul li:first-child{/*первый элемент в списке*/
+    color: red;
+}
+
+/*.header-nav ul li:nth-child(2){/*второй элемент в списке
+    color: red;
+}*/
+.header-flex-2, 
+.header-social ul{
+    display: flex;
+}
+
+.header-social ul li{
+    margin-right: 18px;
+}
+.header-social ul li:last-child{/* псевдоэлемент для последнего li отступ равен 0*/
+    margin-right: 0px;
+}
+.header-social{/*разлепить ссылки имен от соцсетей*/
+    margin: 0px 17px;
+    border-left: 0.5px solid #E5E5E5; /*вертикальная линия, копируем из figma*/
+    border-right: 0.5px solid #E5E5E5;
+    /*отодвинуть полосочки*/
+    padding: 0px 17px;
+}
+.bunner{
+    position: relative;
+}
+.bunner-info{
+    position: absolute;
+    width: 500px;
+    left: 70px;
+    bottom: 140px;
+
+}
+.tag{
+    background: rgba(131, 92, 92, 0.15);/*копируем из figma*/
+    border-radius: 8px;
+    padding: 5px 10px;
+
+    font-family:'Roboto', sans-serif;    
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: #FFFFFF;
+}
+.middle-line{
+    height: 1px;
+    min-width: 30px;
+    background: #E5E5E5;
+    margin: 0px 11px;
+    justify-content: space-between;
+    position: relative; 
+    top: 8px;      
+}
+.horisontal{
+    display: flex;
+    justify-content: space-between; /*разбросает блоки в разные стороны*/
+    align-items:flex-start;
+    font-family: Lora;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+
+    
+}
+
+.richard{
+    width: 530px;  
+   
+}
+
+.color_white{
+    color: #FFFFFF;
+}
+
+.fnt{    
+    font-family: Lora;
+    font-style: normal;    
+    font-size: 12px;
+    line-height: 20px;
+}    
+.container{
+    width: 1300px;
+    margin: 150px auto; /*auto - для того чтобы при широком экране автоматически отступы справа и слева были одинаковы*/
+}
+.h2-title{    
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+    color: #495057;
+}
+.filter-list{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.filter-list li{
+    margin-right: 20px;/* ml20  -  отступы между элементами списка*/    
+}
+.filter-list li:last-child{ /*правый элемент сдвигаем вправо*/
+    margin-left: auto;
+    margin-right: 0px;
+}
+.filter-list li a{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+    color: #495057;
+    transition: all 0.3s;
+}
+.filter-list li a:hover{
+    transition: all 0.3s;   
+    color: #D4A373;    
+}
+.topic{
+    width: 310px;
+    position: relative; /*Относительно родителя*/
+    color: #6C757D;
+    cursor: pointer; /**/
+
+}
+.topic-image{
+    width: 100%;/*310px - относительно блока*/
+    height: 280px;/*из дизайна*/
+    overflow: hidden; /* работает совместно с  cursor:pointer и .topic:hover .topic-image img{*/
+    
+}
+.topic-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*задает заполнение объекта внутри родитля без искажения*/
+    border-radius: 5px;
+    
+}
+.tag-list{
+    /*расположить поверх картинок*/
+    position: absolute;
+    top:20px;
+    right: 20px;
+
+    display: flex;
+}
+.tag-list li{
+    margin-right: 10px;
+
+}
+.tag-list li:last-child{
+    margin-right: 0px;
+}
+.topic-date{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.topic-title{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+}
+.topic-text{
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+}
+.topic-list{
+    display: flex;
+    flex-wrap: wrap;/*перенос на новую строку*/
+    gap: 50px 20px;/*выставить отсупы между элементами - строки и столбцы*/
+    /*justify-content: space-between; /*некрасиво*/
+
+
+}
+.bunner-info2{
+    position: absolute;
+    width: 530px;
+    left: calc(50% - 244px);
+    bottom: 284px;
+    text-align: center;
+
+}
+
+.middle-line2{
+    height: 1px;
+    width: 30px;
+    background: #E5E5E5;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    left: calc(50% - 15px);
+    align-items: center;
+    position: relative; 
+    top: 8px;      
+}
+.topic:hover .topic-image img{
+    transform: scale(1.1);/*Можно rotate(180deg)*/
+    transition: 00.3s;
+}
+
+.tag-list{
+    z-index: 1; /**чтобф не пропадали тэги*/
+}
+
+.topic-image{    
+    border-radius: 5px; /*чтобы при наведении радиус также не пропадал*/
+}
+
+.tag-list{
+    z-index: 1;
+}
+.post{
+    position: relative;
+    width: 420px;
+    height: 350px;
+    
+}
+.post img{
+    max-width: 100%; /*чтобы не была больше чем размер нашего блока*/
+    width: 100%; /*, растягиваем на всю ширину, дописываем для высокой картинки второго поста*/
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    object-fit:cover;
+    
+
+}
+
+.post .topic{
+    color: #E5E5E5;
+    position:absolute;
+    z-index: 1; /*текст выдвигаем перед картинкой*/
+    /*позиционируем*/
+    bottom: 42px;
+    left: 40px;
+    width: auto;/*переводим нашу ширину из фиксирвоанной в автоматическую*/
+    right: 40px;
+
+}
+.post .topic .topic-title{ /*переопределяем текст топика тайтл*/
+    color: white;
+}
+/*доделать три топика
+закругления
+hover
+*/
+.post-list{
+    display: flex;
+    /*flex-wrap: wrap;/*перенос на новую строку*/ /*если убрать flex wrap - то появитяс скролл в мобильной версии*/
+    gap: 50px 20px;/*выставить отсупы между элементами - строки и столбцы*/
+    /*justify-content: space-between; /*некрасиво*/
+    
+}
+
+.post:hover {
+    transform: scale(1.1);/*Можно rotate(180deg)*/
+    transition: 00.3s;
+    
+}
+.tag-list:hover {
+    /*transform: scale(1.1);/*Можно rotate(180deg)*/
+    transition: 00.3s;
+}
+
+
+.post-image{
+    width: 100%;/*310px - относительно блока*/
+    height: 280px;/*из дизайна*/
+    overflow: hidden; /* работает совместно с  cursor:pointer и .topic:hover .topic-image img{*/   
+    
+}
+.post-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*задает заполнение объекта внутри родителя без искажения*/
+    border-radius: 5px;    
+}
+
+.post:hover {
+    transform: scale(1.1);/*Можно rotate(180deg)*/
+    transition: 00.3s;
+}
+/*18/11/2021*/
+
+
+.footer{
+    width: 100%;
+    background: #212529;
+    box-sizing: border-box;
+    padding: 106px 0px;
+  
+   
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+.footer-container h3{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.footer-container .header-social{
+    border: none;
+    margin: 15px 0px 0px 0px;
+    padding: 0px;
+}
+.footer-ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px 0px;  
+    margin: 18px;
+   
+} 
+.footer-ul li a{
+      
+    font-size: 12px;
+    line-height: 15px;
+    color: #E5E5E5;
+} 
+.subscribe{
+    width: 100%;
+    padding: 31px 0px;
+    margin-top: 106px;
+    background: #343A40;
+}
+.subscribe-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+.mobile-filter, .mobile-nav{
+    display: none;
+}
+.hamburger-label{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items:center;
+    position:relative; 
+}
+.hamburger{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 8px;
+}
+.hamburger::after, .hamburger::before{
+    content: ''; /*обязательно его создать, иначе ни after ни before не появится*/
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 8px;
+    position: absolute;
+    left: 0px;
+    transition: all 0.3s;
+}
+.hamburger::after {
+    transform: translateY(-10px);
+}
+.hamburger::before{
+    transform: translateY(10px);
+}
+#hamburger{
+    display: none;
+}
+#hamburger:checked ~ header .header-flex .mobile-nav .mobile-hamburger-container .hamburger-label .hamburger::before{ /*Отвечает - активен или нет чекбокс*/
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+#hamburger:checked ~ header .header-flex .mobile-nav .mobile-hamburger-container .hamburger-label .hamburger::after{ 
+    transform: rotate(-45deg); 
+    transition: all 0.3s;   
+}
+#hamburger:checked ~ header .header-flex .mobile-nav .mobile-hamburger-container .hamburger-label .hamburger{/*убираем среднюю линию в крестик*/
+    height: 0px;
+}
+.mobile-menu{
+    position: absolute;
+    left: 0px;
+    top:-500px; /*выносиим за пределы экрана со знаком минус*/
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+#hamburger:checked ~ header {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#hamburger:checked ~ header .mobile-menu{
+    top: 80px;
+    transition: all 0.3s;
+
+}
+.mobile-menu ul li{
+    text-align: right;
+}
