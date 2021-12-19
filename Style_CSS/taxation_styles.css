@@ -25,12 +25,7 @@ body{ /* Во всем BODY будет данный шрифт, - родител
     margin-right: auto;
 
 }
-.container_vert{
-    
-    width: 1170px;
-    padding: 160px auto; 
-    
-}
+
 .lbl-font{   
     font-size: 24px;
     line-height: 24px;
@@ -86,31 +81,43 @@ header nav ul li a:active {
     background: rgb(141, 228, 69);
     border: 5px solid rgb(211, 25, 65);
 }
-.banner{
-    position: relative;          
+.banner-content{
+    position: relative;      
+    left: calc(50% - 960px);       
+    width: 1920px;
+    height: 1280px;
+}
+.image-wrap{
+    width: 1920px;
+    height: 1280px;
+    box-sizing: border-box;
+}
+.image-center{
+    width: 100%;    
+    display: block;   
+      
 }
 .banner-flex{
     position: absolute;
-    margin: 202px 775px 204px 375px;
+    top: 202px;
+    left: 375px;
     display: flex;
-    justify-content: space-between;
-    flex-direction:column;    
+    flex-direction:column;
+    justify-content: space-between;        
     width: 870px;
-    height: 374px;  
-    z-index: 1;  
+    height: 374px;     
 }
-.meaningful{  
-    margin-left: 0px;
+.meaningful{      
     font-size: 60px;
     line-height: 80px;
     font-weight: bold;
-    color: #FFFFFF;
-    
+    color: #FFFFFF; 
+    width: 100%; 
+    height: 160px;  
 }
 .browse{
     width: 470px;
-    height: 64px;
-    margin-left: 0px;
+    height: 64px;    
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;   
@@ -132,24 +139,12 @@ header nav ul li a:active {
     box-shadow: 20px 10px 40px rgba(202, 50, 50, 0.5); /* важно отличие размеров тени, иначе не работает*/
     cursor: progress;
 }
-.top{
+.shape{     
     position: absolute;
-    bottom: 0px;
     right: 0px;
-    width: 554px;
-    height: 554px;
-    
+    bottom: 0px;      
 }
-.top2{
-    position: absolute;
-    width: 558px;
-    height: 558px;
-    left: 227px;
-    top: 61px;
-    border-radius: 65%;
-    filter: alpha(Opacity=40);
-    opacity: 0.4; 
-}
+
 .circle{
     position: absolute;
     width: 558px;
@@ -163,17 +158,22 @@ header nav ul li a:active {
     
 }
 .main{
+    position: relative;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    position: relative;      
+    left: calc(50% - 960px); 
+    width: 1920px;
     justify-content: center;  
-    align-items: center;
-    margin-top: 160px;  
-    margin-bottom: 160px;    
+    align-items: center;        
+    background-color: #E5E5E5;
+    padding-top: 160px;
+    padding-bottom: 160px;
 }
 main ul li{    
     list-style: none; /*убираем точку перед элементами списка*/
 }
-.infoblock{
+.main_info{
     width: 770px;
     height: 152px;    
     display: flex;
@@ -181,9 +181,10 @@ main ul li{
     justify-content: center;
     text-align: center;
     margin-bottom: 60px;
+    
 }
 .offerings{
-    position: static;
+    
     width: 770px;
     height: 64px;    
     font-weight: bold;
@@ -193,49 +194,47 @@ main ul li{
     
 }
 .explore{
-    position: static;
+    
     color: #999999;
     font-size: 24px;
     line-height: 32px;
     width: 770px;
     height: 64px; 
 }
-.batton-main{   
-    font-family: Josefin Sans;
-    font-style: normal;
-    font-weight: bold;     
-    width: 270px;
-    height: 70px;
-    padding-top: 24px;
-    padding-bottom:  22px;
-    padding-left: inherit;  
-    text-align: center;     
-    font-size: 16px;
-    line-height: 24px;    
-}
-.topic-list{
+
+.topic-list{    
+    display: flex; 
+    justify-content: center; 
+    width: 1170px;          
+    flex-wrap: wrap;/*задаёт правила вывода flex-элементов — 
+     в одну строку или в несколько, с 
+     переносом блоков. Если перенос разрешён,
+      то возможно задать направление, в котором 
+      выводятся блоки.*/
+    gap: 50px 20px;/*выставить отсупы между элементами - строки и столбцы*/
     
+}
+.container_vert{     
     display: flex;
     flex-direction: column;
-    position: absolute;
-    
-    flex-wrap: wrap;/*перенос на новую строку*/
-    gap: 50px 20px;/*выставить отсупы между элементами - строки и столбцы*/
-    /*justify-content: space-between; /*некрасиво*/
-    border: 1px solid black;
-
-    
+    justify-content: center;    
 }
 .topic{
     display:flex;   
     flex-direction: column; 
-    width: 370;
+    width: 370px;
     height: 480px;
     position: relative;
-    cursor: pointer;
-    border: 1px solid black;
+    cursor: pointer;      
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
+.topic_image{    
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    overflow: hidden;  
+    
+}
 .tag-list{    
     display: flex;
     position: absolute; 
@@ -251,6 +250,8 @@ main ul li{
     text-transform: uppercase;
     padding: 8px 12px 8px 12px;
     margin-right: 8px;
+    background-color: rgba(192, 181, 181, 0.8);
+    border-radius: 3px;
 }
 
 .oxalis{
@@ -261,7 +262,7 @@ main ul li{
     padding-right: 24px;
     width:322px;
     height: 240px; 
-    border: 1px solid black;
+   
 }
 
 .oxalis-title{
@@ -278,7 +279,7 @@ main ul li{
 }
 .recognized{
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     color: #333333;
 }
@@ -289,3 +290,162 @@ main ul li{
     color: #333333;
 }
 
+.batton-main{   
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: bold;     
+    width: 270px;
+    height: 70px;
+    padding-top: 24px;
+    padding-bottom:  22px;
+    padding-left: inherit;  
+    text-align: center;     
+    font-size: 16px;
+    line-height: 24px;  
+    
+} 
+
+.batton-main-hover:hover{
+cursor: pointer;
+background-color: #d3cdcd;
+border-radius: 5px;
+transition: all 0.3s;
+}
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    background-color: #ECECEC; 
+    left: calc(50% - 960px); 
+    border: solid black 1px;
+}
+.footer_info{
+    position: relative;
+    justify-content: space-between;    
+    display: flex;
+    padding: 60px 375px;
+    border: #333333 solid 2px;  
+      
+}
+.footer_info ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer_column1{
+    width: 370px;
+    height: 184px;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.footer_column1_1{
+    width: 370px;
+    height: 694px;
+    border: solid black 1px;
+}
+.footer_column2{
+    width: 270px;
+    height: 184px;
+    border: solid black 1px;        
+}
+
+
+.shevron{   
+    top: 60px;
+    right: 375px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #128C76;  
+    border: solid black 1px;   
+}
+.shevron_img{
+    display: block;   
+    margin: 25% auto;
+    background-color: #128C76;
+
+}
+.footer_info2{
+    display: flex;
+    width: 370px;
+    height: 103px;
+    
+}
+.footer_column2 ul li:nth-child(1){
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.footer_column2 ul li:nth-child(2),
+:nth-child(3),
+:nth-child(4){
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 16px;
+}
+.footer_column1 ul li:nth-child(1){
+    letter-spacing: 0.06em;
+    color: #333333;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.footer_column1 ul li:nth-child(2){
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.204545px;
+     
+}
+.footer_column1_row2{
+    width: 370px;
+    height: 69px;
+    border: solid black 1px;
+}
+.footer_column1_row2 ul li:nth-child(1){
+
+}
+.header-social ul{
+    display: flex;
+}
+
+.header-social ul li{
+    margin-right: 18px;
+}
+.header-social ul li:last-child{/* псевдоэлемент для последнего li отступ равен 0*/
+    margin-right: 0px;
+}
+.header-social{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 370px;
+    height: 103px;    
+    border: solid black 1px;
+    bottom: 0;
+    z-index: 1;
+}
+.header-social ul li{
+    display: block;  
+    position: absolute;
+    flex-direction: row;  
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    z-index: 1;
+}
+.header-social ul li:hover{
+    cursor: pointer;
+}
